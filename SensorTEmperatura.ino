@@ -16,7 +16,7 @@ void loop() {
 float h = dht.readHumidity();
 float t = dht.readTemperature();
 float f = dht.readTemperature(true);
-if (isnan(h) || isnan(t) || isnan(f) {
+if (isnan(h) || isnan(t) || isnan(f)) {
   Serial.println("Error obteniendo los datos del senosr DHT11");
   }
   float hif = dht.computeHeatIndex(f,h);
@@ -36,4 +36,3 @@ if (isnan(h) || isnan(t) || isnan(f) {
   Serial.print(" *F");
 
   }
-
